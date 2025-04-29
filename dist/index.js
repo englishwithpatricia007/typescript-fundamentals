@@ -26,3 +26,7 @@ let direction = Direction.Up;
 console.log(direction);
 direction = Direction.Left;
 console.log(direction);
+const productName = 'Tênis';
+let itemId;
+itemId = productName;
+let item2Id = productName;
