@@ -9,8 +9,8 @@ type User = {
     lastName: string;
     age: number;
     password?: string; //? significa que é opcional
-    // password: string; // Se não for opcional, o TypeScript vai exigir que a propriedade seja passada
     orders: Order[]; // Array de objetos do tipo Order
+    register?(): string;
 }
 
 const user: User = {
@@ -22,7 +22,10 @@ const user: User = {
         { id: 1, price: 100 },
         { id: 2, price: 200 },
         { id: 3, price: 300 }
-    ]   
+    ],   
+    register: function() {
+        return `${this.firstName} ${this.lastName} registered!`;
+    }
 }
 
 const pass = (message : string) : void => {} // Se a propriedade password for opcional, não é necessário passar ela

@@ -8,7 +8,10 @@ const user = {
         { id: 1, price: 100 },
         { id: 2, price: 200 },
         { id: 3, price: 300 }
-    ]
+    ],
+    register: function () {
+        return `${this.firstName} ${this.lastName} registered!`;
+    }
 };
 const pass = (message) => { };
 pass(user.password);
